@@ -45,8 +45,11 @@ h2 {
 h2, h3, b {
     font-weight: 500;
 }
+h4 {
+    margin-bottom: -10px;
+}
 
-main > section {
+section {
     margin-bottom: 40px;
 }
 .websites h3 {
