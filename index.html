@@ -22,16 +22,16 @@
             <section>
                 <h2>Introduction</h2>
                 <p>
-                    Hello. My name is Mikhail Izotov, I am 22 years old.
+                    Hello. My name is Mikhail Izotov, I am <span class="age"></span> years old.
                     A beginner programmer from St.&nbsp;Petersburg,&nbsp;Russia. Mainly engaged in web development, fullstack.
                 </p>
                 <p>
                     For now my portfolio is full of only independent non-commercial projects, which are dedicated to my hobbies.
                 </p>
-                <p>Two of my websites: </p>
+                <p>Main works: </p>
                 <ul>
-                    <li>Furoku. Related to Japanese language learning</li>
-                    <li>Exhale. A gallery of photos I've taken</li>
+                    <li>Website Furoku - related to Japanese language learning</li>
+                    <li>Library Kana transformer - also related to Japanese language</li>
                 </ul>
                 <p>
                     More details about them are written below.
@@ -47,7 +47,7 @@
                     </p>
                     <p>Technologies I'm familiar with:</p>
                     <ul>
-                        <li><b>Languages</b>. JavaScript (TypeScript)</li>
+                        <li><b>Languages</b>. JavaScript (TypeScript), Python</li>
                         <li><b>Frameworks</b>. NextJS, Express</li>
                         <li><b>Testing tools</b>. Chai, Mocha</li>
                         <li><b>Bundler</b>. Rollup</li>
@@ -57,14 +57,12 @@
                     </ul>
                     <a href="https://github.com/anuraghazra/github-readme-stats" target="_blank">
                         <img 
-                            src="https://github-readme-stats.vercel.app/api/top-langs/?username=18degrees&layout=compact&size_weight=0.5&count_weight=0.5&custom_title=Github stats&title_color=000&border_radius=0&bg_color=fff&hide_border=true&disable_animations=true"
+                            src="https://github-stats-extended.vercel.app/api/top-langs/?username=18degrees&layout=compact&size_weight=0.5&count_weight=0.5&custom_title=Github stats&title_color=000&border_radius=0&bg_color=fff&hide_border=true&disable_animations=true"
                             height="140"
                         />
                     </a>
-                    <p>
-                        Both of my sites use a combination of: 
-                        typescript&nbsp;+&nbsp;nextjs&nbsp;+&nbsp;couchDB.
-                    </p>
+                    <h4>Machine learning</h4>
+                    <p>Diving into deep learning. Have some ideas on how to apply it on the website dedicated to Japanese learning. But it's still in development.</p>
                 </section>
                 <section>
                     <h3>Foreign Languages</h3>
@@ -77,17 +75,17 @@
                     </p>
                 </section>
             </section>
-            <section class="websites">
-                <h2>Websites</h2>
+            <section class="projects">
+                <h2>Projects</h2>
                 <section>
-                    <h3>Furoku</h3>
+                    <h3>Furoku (website)</h3>
                     <p class="info">
                         <a href="https://github.com/18degrees/furoku" target="_blank">Repository</a>
                         <a href="https://furoku.ru" target="_blank">Site</a>
                     </p>
                     <p><i>Available only in Russian</i></p>
                     <p>
-                        Created to make learning Japanese easier. The main function is to sort hieroglyphs (and their combinations) by urgency of repetition. 
+                        Created to make learning of Japanese easier. The main function is to sort hieroglyphs (and their combinations) by urgency of repetition. 
                         This idea, of course, has been realized more than once, but I did it my way. 
                         Gradually I try to improve the site, adding missing functionality.
                     </p>
@@ -103,29 +101,30 @@
                     </ul>
                 </section>
                 <section>
-                    <h3>Exhale</h3>
+                    <h3>Kana transformer (library)</h3>
                     <p class="info">
-                        <a href="https://github.com/18degrees/exhale" target="_blank">Repository</a>
+                        <a href="https://github.com/18degrees/kana-transformer" target="_blank">Repository</a>
+                        <a href="https://18degrees.github.io/kana-transformer-web/" target="_blank">Demo</a>
+                        <a href="https://www.npmjs.com/package/kana-transformer" target="_blank">NPM</a>
                     </p>
-                    <p><i>Not available yet</i></p>
-                    <p>
-                        Site-gallery. I like to take photos sometimes, and the best of them are posted there.
-                    </p>
+                    <p>Library features</p>
+                    <ol>
+                        <li>Transform Russian or English syllables into one of Japanese syllabaries (kana)</li>
+                        <li>Turn kana to the Russian or English alphabet</li>
+                        <li>Convert one kana to the other</li>
+                    </ol>
+                    <p>For the first two operations, there is a choice of transcription/transliteration systems.</p>
                     <h4>Technologies used</h4>
-                    <p>TypeScript - NextJS - ESLint - Apache CouchDB (by nano) - piexifjs - exifr - react-plock</p>
-                    <h4>Solved problems</h4>
-                    <ul>
-                        <li><b>exifr</b>. EXIF photo retrieval</li>
-                        <li><b>piexifjs</b>. Editing sensitive information from EXIF photo</li>
-                        <li><b>nano, NextJS, NextAuth</b>. Admin user authentication</li>
-                        <li><b>react-plock</b>. Arrange photos in a grid with equal margins regardless of their height</li>
-                        <li><b>NextJS</b>. 
-                            Resalized modal windows and dynamic pages. When you click on a photo, its modal preview page is shown. 
-                            When it appears, the page address changes, and when reloaded, the photo page is dynamically generated.
-                        </li>
-                    </ul>
+                    <p>Typescript - Chai - Mocha - Rollup</p>
                 </section>
             </section>
         </main>
     </body>
+    <script>
+        const ageTag = document.querySelector('.age')
+        const bornDate = new Date('2002-04-05')
+        const currentDate = new Date().setHours(0, 0, 0, 0)
+        const yearDiff = new Date(new Date().setHours(0, 0, 0, 0)).getFullYear() - new Date('2002-04-05').getFullYear()
+        ageTag.textContent = yearDiff
+    </script>
 </html>

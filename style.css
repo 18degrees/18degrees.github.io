@@ -32,10 +32,10 @@ header p {
 a {
     color: #454545
 }
-ul {
+ul, ol {
     padding-left: 25px;
 }
-ul li {
+li {
     margin-bottom: 5px;
 }
 h2 {
@@ -52,7 +52,7 @@ h4 {
 section {
     margin-bottom: 40px;
 }
-.websites h3 {
+.projects h3 {
     margin-bottom: 3px;
 }
 .info {

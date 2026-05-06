@@ -22,20 +22,18 @@
             <section>
                 <h2>Вступление</h2>
                 <p>
-                    Здравствуйте. Меня зовут Михаил Изотов, мне 22 года.
+                    Здравствуйте. Меня зовут Михаил Изотов, мне <span class="age"></span> года.
                     Я начинающий программист из Санкт-Петербурга. Занимаюсь преимущественно веб разработкой, фулстэк.
                 </p>
                 <p>
                     Моё портфолио полнится пока только самостоятельными некоммерческими проектами, которые посвящены моим хобби.
                 </p>
-                <p>Два моих вебсайта: </p>
+                <p>Основные работы:</p>
                 <ul>
-                    <li>Furoku. Связан с изучением японского языка</li>
-                    <li>Exhale. Галерея сделанных мной фотографий</li>
+                    <li>Вебсайт Furoku - связан с изучением японского</li>
+                    <li>Библиотека Kana transformer - также связана с японским языком</li>
                 </ul>
-                <p>
-                    Подробнее о них написано ниже.
-                </p>
+                <p>Подробнее о них написано ниже.</p>
             </section>
             <section>
                 <h2>Навыки</h2>
@@ -47,7 +45,7 @@
                     </p>
                     <p>Технологии, с которыми я знаком:</p>
                     <ul>
-                        <li><b>Языки</b>. JavaScript (TypeScript)</li>
+                        <li><b>Языки</b>. JavaScript (TypeScript), Python</li>
                         <li><b>Фреймворки</b>. NextJS, Express</li>
                         <li><b>Инструменты для тестирования</b>. Chai, Mocha</li>
                         <li><b>Сборщики</b>. Rollup</li>
@@ -57,14 +55,12 @@
                     </ul>
                     <a href="https://github.com/anuraghazra/github-readme-stats" target="_blank">
                         <img 
-                            src="https://github-readme-stats.vercel.app/api/top-langs/?username=18degrees&layout=compact&size_weight=0.5&count_weight=0.5&custom_title=Гитхаб статистика&title_color=000&border_radius=0&bg_color=fff&hide_border=true&disable_animations=true" 
+                            src="https://github-stats-extended.vercel.app/api/top-langs/?username=18degrees&layout=compact&size_weight=0.5&count_weight=0.5&custom_title=Гитхаб статистика&title_color=000&border_radius=0&bg_color=fff&hide_border=true&disable_animations=true" 
                             height="140"
                         />
                     </a>
-                    <p>
-                        В обоих моих сайтах используется комбинация: 
-                        typescript&nbsp;+&nbsp;nextjs&nbsp;+&nbsp;couchDB.
-                    </p>
+                    <h4>Машинное обучения</h4>
+                    <p>Погружаюсь в глубинное обучение. Есть идеи, как его можно применить на сайте, посвящённом изучению японского. Но это пока в разработке.</p>
                 </section>
                 <section>
                     <h3>Иностранные языки</h3>
@@ -77,10 +73,10 @@
                     </p>
                 </section>
             </section>
-            <section class="websites">
-                <h2>Вебсайты</h2>
+            <section class="projects">
+                <h2>Проекты</h2>
                 <section>
-                    <h3>Furoku</h3>
+                    <h3>Furoku (вебсайт)</h3>
                     <p class="info">
                         <a href="https://github.com/18degrees/furoku" target="_blank">Репозиторий</a>
                         <a href="https://furoku.ru" target="_blank">Сайт</a>
@@ -102,29 +98,30 @@
                     </ul>
                 </section>
                 <section>
-                    <h3>Exhale</h3>
+                    <h3>Kana transformer (библиотека)</h3>
                     <p class="info">
-                        <a href="https://github.com/18degrees/exhale" target="_blank">Репозиторий</a>
+                        <a href="https://github.com/18degrees/kana-transformer" target="_blank">Репозиторий</a>
+                        <a href="https://18degrees.github.io/kana-transformer-web/" target="_blank">Демо</a>
+                        <a href="https://www.npmjs.com/package/kana-transformer" target="_blank">NPM</a>
                     </p>
-                    <p><i>Ещё не доступен</i></p>
-                    <p>
-                        Сайт-галерея. Люблю иногда пофотографировать, а лучшие фото выкладываю туда.
-                    </p>
+                    <p>Возможности библиотеки</p>
+                    <ol>
+                        <li>Трансфомировать русские или английские слоги в одну из японских азбук (кану)</li>
+                        <li>Привести кану к русскому или английскому алфавиту</li>
+                        <li>Конвертировать одну кану в другую</li>
+                    </ol>
+                    <p>Для первых двух операций предусмотрен выбор системы транскрипции/транслитерации</p>
                     <h4>Использованные технологии</h4>
-                    <p>TypeScript - NextJS - ESLint - Apache CouchDB (с nano) - piexifjs - exifr - react-plock</p>
-                    <h4>Решённые задачи</h4>
-                    <ul>
-                        <li><b>exifr</b>. Получение EXIF фото</li>
-                        <li><b>piexifjs</b>. Редакция чувствительной информации из EXIF фото</li>
-                        <li><b>nano, NextJS, NextAuth</b>. Аутентификация админ-пользователя</li>
-                        <li><b>react-plock</b>. Расположение фотографий сеткой с одинаковыми отступами вне зависимости от их высоты</li>
-                        <li><b>NextJS</b>. 
-                            Резализованы модальные окна и динамические страницы. При клике на фото показывается его модальная превью-страница. 
-                            С её появлением меняется адрес страницы, а при перезагрузке динамически генерируется страница фото.
-                        </li>
-                    </ul>
+                    <p>Typescript - Chai - Mocha - Rollup</p>
                 </section>
             </section>
         </main>
     </body>
+    <script>
+        const ageTag = document.querySelector('.age')
+        const bornDate = new Date('2002-04-05')
+        const currentDate = new Date().setHours(0, 0, 0, 0)
+        const yearDiff = new Date(new Date().setHours(0, 0, 0, 0)).getFullYear() - new Date('2002-04-05').getFullYear()
+        ageTag.textContent = yearDiff
+    </script>
 </html>
